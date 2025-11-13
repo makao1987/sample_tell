@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Light Theme -->
+    <style name="Theme.SampleTell" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- カスタムカラーやフォントをここに定義可能 -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <!-- Compose 用の設定 -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+</resources>

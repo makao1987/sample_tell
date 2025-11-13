@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.sample_tell">
+
+    <!-- 通話に必要なパーミッション -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- ハードウェア要件（非必須として明示） -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <application
+        android:name=".SampleTellApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="sample_tell"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.SampleTell"
+        tools:replace="android:label">
+
+        <!-- Jitsi SDK の Activity（必要に応じて） -->
+        <activity
+            android:name="org.jitsi.meet.sdk.JitsiMeetActivity"
+            android:exported="true" />
+
+        <!-- メイン画面 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
